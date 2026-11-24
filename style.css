@@ -1,0 +1,158 @@
+/* Reset CSS cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9fafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Container chứa 3 thẻ */
+.pricing-container {
+    display: flex;
+    gap: 1.5rem; /* Khoảng cách giữa các thẻ */
+    align-items: stretch; /* Ép các thẻ cao bằng nhau */
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Style chung cho từng thẻ */
+.card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 2rem;
+    flex: 1; /* Chia đều không gian */
+    display: flex;
+    flex-direction: column; /* Xếp nội dung theo chiều dọc */
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Thẻ Pro nổi bật */
+.card.popular {
+    border: 2px solid #ff5722;
+    transform: scale(1.05); /* Phóng to nhẹ */
+    z-index: 10;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card.popular:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+/* Nhãn Most Popular */
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff5722;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Typography */
+.plan-name {
+    font-size: 1.25rem;
+    color: #111827;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #6b7280;
+    font-weight: normal;
+}
+
+.description {
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    min-height: 40px; /* Giữ khoảng cách đều */
+}
+
+/* Danh sách tính năng */
+.features {
+    list-style: none;
+    margin-bottom: 2rem;
+    flex-grow: 1; /* Đẩy nút bấm xuống dưới cùng */
+}
+
+.features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.75rem;
+    color: #4b5563;
+    font-size: 0.9rem;
+}
+
+.features li span {
+    color: #10b981; /* Màu xanh lá cho dấu tick */
+    font-weight: bold;
+}
+
+/* Nút bấm */
+.btn {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+/* Nút viền (Basic & Business) */
+.btn-outline {
+    background: transparent;
+    border-color: #d1d5db;
+    color: #374151;
+}
+
+.btn-outline:hover, .btn-outline:focus {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+/* Nút chính (Pro) */
+.btn-primary {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #e64a19;
+    box-shadow: 0 4px 6px -1px rgba(255, 87, 34, 0.3);
+}
